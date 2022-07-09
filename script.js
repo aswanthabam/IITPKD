@@ -19,7 +19,7 @@ function setUp()
 	}
 	explore.onclick = function()
 	{
-		window.scrollTo(0,main.getBoundingClientRect().top - 150);
+		window.scrollTo({top: main.getBoundingClientRect().top - 150, behavior: "smooth"});
 	}
 
 // 	window.onscroll = function()
