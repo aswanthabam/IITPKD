@@ -7,6 +7,7 @@ function setUp()
 	topbar_banner = document.querySelector(".topbar .icon img");
 	parallex = document.querySelector(".parallex");
 	main = document.querySelector(".main");
+	explore = document.querySelector(".explore");
 	
 	mar.onmouseover = function(e)
 	{
@@ -16,22 +17,27 @@ function setUp()
 	{
 		mar.start();
 	}
-/*	window.onscroll = function()
+	explore.onclick = function()
 	{
-		if(window.scrollY > parallex.getBoundingClientRect().height -100)
-		{
-			main.style.borderRadius = "0px";
-			topbar.style.padding = "2px";
-			topbar.style.width = "calc(100% - 4px)"
-			//topbar_banner.classList.add("scrolled");
-		}
-		else{
-			main.style.borderRadius = "30px 30px 0px 0px";
-			topbar.style.padding = "5px";
-			topbar.style.width = "calc(100% - 10px)"
-			//topbar_banner.classList.remove("scrolled");
-		}
-	}*/
+		window.scrollTo(0,main.getBoundingClientRect().top - 150);
+	}
+
+// 	window.onscroll = function()
+// 	{
+// 		if(window.scrollY > parallex.getBoundingClientRect().height -100)
+// 		{
+// 			main.style.borderRadius = "0px";
+// 			topbar.style.padding = "2px";
+// 			topbar.style.width = "calc(100% - 4px)"
+// 			//topbar_banner.classList.add("scrolled");
+// 		}
+// 		else{
+// 			main.style.borderRadius = "30px 30px 0px 0px";
+// 			topbar.style.padding = "5px";
+// 			topbar.style.width = "calc(100% - 10px)"
+// 			//topbar_banner.classList.remove("scrolled");
+// 		}
+// 	}
 }
 
 function carousel(elem) {
