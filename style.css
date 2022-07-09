@@ -375,4 +375,8 @@ body
 		
 		height: 100%;
 	}
+	.parallex .parallex-cont > div
+	{
+		transform: translateY(0%);
+	}
 }
