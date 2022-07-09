@@ -3,6 +3,19 @@
 	padding: 0px;
 	color: #12121270;
 }
+:root
+{
+	--color-primary:  #F7A600;
+}
+.link-1
+{
+	text-decoration: none;
+	color: #12121290;
+}
+.link-1:hover,
+a:hover{
+	color: var(--color-primary);
+}
 body
 {
 	margin: 0px;
@@ -15,7 +28,7 @@ body
 .topbar
 {
 	width: calc(100% - 10px);
-	height: 35px;
+	height: auto;
 	padding: 5px;
 	position: absolute;
 	top: 0px;
@@ -25,7 +38,7 @@ body
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 35px;
+	width: auto;
 	height: 100%;
 }
 .topbar .name
@@ -40,8 +53,9 @@ body
 }
 .topbar .icon img
 {
-	width: 35px;
-	height: 35px;
+	width: auto;
+	height: 100px;
+	margin: 20px;
 }
 .topbar .menu
 {
@@ -54,11 +68,17 @@ body
 	right: 0px;
 }
 .topbar .menu span{
+	font-size: 20px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	color: #121212;
 	height: 100%;
-	margin: 0px 10px 0px 10px;
+	margin: 0px 15px 0px 15px;
+}
+.topbar .menu span i.bx-menu
+{
+	font-size: 30px;
 }
 .main
 {
@@ -66,7 +86,7 @@ body
 	height: auto;
 	min-height: 100vh;
 	margin: 10px;
-	margin-top: 55px;
+	margin-top: 160px;
 }
 .footer
 {
