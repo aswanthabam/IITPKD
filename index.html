@@ -2,11 +2,22 @@
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width"/>
 		<title>IIT Palakad</title>
 		<link rel="stylesheet" href="./style.css"/>
+
 		<!-- Box Icon -->
+		
 		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+		<!-- Font styles -->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Exo+2:ital,wght@0,300;1,200&family=Finlandica:ital@0;1&family=Kanit:ital,wght@0,300;1,200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+
 		<style>
+			/*Loading animation Style*/
 			@keyframes loader-animate{
 				0%{
 					transform: rotate(0deg);
@@ -27,7 +38,7 @@
 			}
 			.loader-container{
 				display: flex;
-				background: var(--color-blured-black);
+				background: #12121295;
 				align-items: center;
 				justify-content: center;
 				min-height: 100vh;
@@ -40,10 +51,10 @@
 			}
 			.loader-container .loader{
 				position: relative;
-				width: 50px;
-				height: 50px;
+				width: 70px;
+				height: 70px;
 				border-radius: 50%;
-				border-left: 5px solid var(--color-gray);
+				background: linear-gradient(45deg,transparent,transparent,#ddff00);
 				animation: loader-animate 1s linear infinite;
 			}
 			.loader-container .loader:before{
@@ -56,21 +67,31 @@
 				border-radius: 50%;
 				z-index: 1000;
 			}
-			/*.loader-container .loader:after{
+			.loader-container .loader:after{
 				content: '';
 				position: absolute;
 				top: 0px;
 				left: 0px;
 				right: 0px;
 				bottom: 0px;
+				background: linear-gradient(45deg,transparent,transparent,#ddff00);
 				border-radius: 50%;
 				z-index: 1000;
-				z-index: 1;
 				filter: blur(30px);
-			}*/
+			}
+			.loader-container img
+			{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				width: 60px;
+				height: 60px;
+			}
 		</style>
 	</head>
 	<body>
+		<!-- loading animation containers -->
 		<div class="loader-container">
 			<div class="loader">
 				
@@ -90,7 +111,7 @@
 				<span><a class="link-1" href="#">Home</a></span>
 				<span><a class="link-1" href="#">Home</a></span>
 				<span><a class="link-1" href="#">Home</a></span>
-				<span><i class='bx bx-menu'></i></span>
+				<span class="menu-icon"><i class='bx bx-menu'></i></span>
 			</div>
 		</div>
 		<div class="main">
@@ -105,7 +126,24 @@ Tellus cras adipiscing enim eu turpis. Scelerisque viverra mauris in aliquam sem
 Neque ornare aenean euismod elementum nisi quis eleifend quam. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Ipsum suspendisse ultrices gravida dictum fusce. Mus mauris vitae ultricies leo integer malesuada nunc. Vel facilisis volutpat est velit. Sit amet commodo nulla facilisi nullam vehicula ipsum. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Semper auctor neque vitae tempus quam. Urna nec tincidunt praesent semper. Duis convallis convallis tellus id interdum velit laoreet id. Porta nibh venenatis cras sed felis eget velit aliquet. Volutpat sed cras ornare arcu dui vivamus. Dolor purus non enim praesent elementum facilisis leo. Est lorem ipsum dolor sit amet consectetur adipiscing. Sed lectus vestibulum mattis ullamcorper velit sed. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Nibh cras pulvinar mattis nunc sed blandit libero volutpat sed. Ipsum dolor sit amet consectetur adipiscing. Nunc lobortis mattis aliquam faucibus purus in massa. Scelerisque eleifend donec pretium vulputate.
 		</div>
 		<div class="footer">
-			footer
+			<div class="search">
+				<div>
+					<form action="" method="get">
+						<input type="search" name="query" placeholder="Search" />
+						<button type="submit"><i class='bx bx-search-alt'></i></button>
+					</form>
+				</div>
+				
+			</div>
+			<div class="content">
+				Footer content
+			</div>
 		</div>
+		<script type="text/javascript">
+			window.onload = function()
+			{
+				document.querySelector(".loader-container").style.display = "none";
+			}
+		</script>
 	</body>
 </html>
