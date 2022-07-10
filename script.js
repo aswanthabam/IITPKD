@@ -39,7 +39,10 @@ function setUp()
 // 		}
 // 	}
 }
-
+function imageLoaded(elem)
+{
+	elem.style.opacity = 1;
+}
 function carousel(elem) {
   var i;
   var x = elem.getElementsByClassName("slide");
@@ -58,5 +61,5 @@ function carousel(elem) {
   x[slideIndex-1].style.display = "block";
   /*x[slideIndex-1].style.transition = "all 1s ease";
   x[slideIndex-1].style.opacity = 1;*/
-  setTimeout(carousel, 3000,elem); // Change image every 2 seconds
+  setTimeout(carousel, 4900,elem); // Change image every 2 seconds
 }
