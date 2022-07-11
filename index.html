@@ -16,6 +16,12 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Exo+2:ital,wght@0,300;1,200&family=Finlandica:ital@0;1&family=Kanit:ital,wght@0,300;1,200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
         
+		<link
+		  rel="stylesheet"
+		  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+		/>
+
+
         <script src="./script.js" type="text/javascript" charset="utf-8"></script>
         
 		<style>
@@ -113,7 +119,12 @@
 				<span><a class="link-1" href="#">Departments</a></span>
 				<span><a class="link-1" href="#">Library</a></span>
 				<span><a class="link-1" href="#">Partner With Us</a></span>
-				<span class="menu-icon"><i class='bx bx-menu'></i></span>
+				<span id="menu-icon" class="menu-icon"><span><i class='bx bx-menu'></i><span> Menu</span></span></span>
+			</div>
+			<div id="full-menu" class="full-menu">
+				<div class="item">
+					<span>Home 1</span>
+				</div>
 			</div>
 		</div>
 		<div class="parallex">
@@ -167,11 +178,11 @@
 			<div style="width: 100%;height: 30px;" id="main-m"></div>
 			
 			<div class="latest-widget">
-		    	<div id="slideshow1" class="slideshow">
+		    	<!-- <div id="slideshow1" class="slideshow">
 		    		<img onload="imageLoaded(this)" class="slide preload-img" src="/resources/pics/dsc03075.jpg" loading="lazy">
 		    		<img onload="imageLoaded(this)" class="slide preload-img" src="/resources/pics/dsc05502.jpg" loading="lazy">
 		    		<img onload="imageLoaded(this)" class="slide preload-img" src="/resources/pics/dsc3824.jpg" loading="lazy">
-		    		<!--
+		    		<!-
 			    	<div class="slide">
 				    	<img src="/resources/pics/dsc03075.jpg" loading="lazy">
 			    	</div>					   
@@ -180,8 +191,23 @@
 			    	</div>					   
 			    	<div class="slide">
 				    	<img src="/resources/pics/dsc3824.jpg" loading="lazy">
-			    	</div>	-->				   
-		    	</div>
+			    	</div>	--				   
+		    	</div> -->
+				<div class="latest-widget-swiper swiper-container main-banner swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+				<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+					<!-- Slides -->
+						<div class="swiper-slide"><img onload="imageLoaded(this)" class="swiper-shutters-image" src="/resources/pics/dsc03075.jpg" loading="lazy"></div>
+						<div class="swiper-slide"><img onload="imageLoaded(this)" class="swiper-shutters-image" src="/resources/pics/dsc05502.jpg" loading="lazy"></div>
+						<div class="swiper-slide"><img onload="imageLoaded(this)" class="swiper-shutters-image" src="/resources/pics/dsc3824.jpg" loading="lazy"></div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination banner-pagination swiper-pagination-clickable swiper-pagination-bullets">
+						<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+						<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+						<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+					</div>
+				</div>
 		    	<div class="latest-news">
 		    	    <h3>What's New?</h3>
 				    <marquee class="marquee-top" direction="up">
@@ -257,11 +283,11 @@
 							<div class="hor-block">
 								<a href="#">
 									<div class="hor-block-wrap">
-										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/bio.jpg"/>
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/civil.jpg"/>
 										<div class="hor-cont-img">
-											<h3 class="underlined u-white c-white">Department of Biological Sciences and Engineering</h3>
+											<h3 class="underlined u-white c-white">Department of Civil Engineering</h3>
 											<p class="c-white t-v-small t-o-ellipse">
-												Department of Biological Sciences and Engineering (BSE) at Indian Institute of Technology Palakkad aims at interdisciplinary biomedical research and biotechnology to improve human and animal health under ‘One Health’ concept.
+												Indian Institute of Technology, Palakkad was established in the academic year 2015-16 and Civil Engineering (CE) has been part of the institute since its inception. Over the years, the discipline has developed in terms of academics, research, R & D projects, industry collaboration and laboratory development.
 											</p>
 										</div>
 									</div>
@@ -271,11 +297,11 @@
 							<div class="hor-block">
 								<a href="#">
 									<div class="hor-block-wrap">
-										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/chem.jpg"/>
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/computer.jpg"/>
 										<div class="hor-cont-img">
-											<h3 class="underlined u-white c-white">Department of Chemistry</h3>
+											<h3 class="underlined u-white c-white">Department of Computer Science</h3>
 											<p class="c-white t-v-small t-o-ellipse">
-												The Chemistry Department at IIT Palakkad started functioning with three visiting faculties for B. Tech. Teaching in the year 2015, but has expanded to a strength of eight permanent faculty members at Assistant Professor level.
+												The Computer Science and Engineering (CSE) department at Indian Institute of Technology Palakkad is a vibrant discipline that is committed to the advancement of knowledge through world-class teaching and high-impact research. It unravels the fundamentals of CSE to the students in a systematic and logical manner.
 											</p>
 										</div>
 									</div>
@@ -286,11 +312,11 @@
 							<div class="hor-block">
 								<a href="#">
 									<div class="hor-block-wrap">
-										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/bio.jpg"/>
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/data.jpg"/>
 										<div class="hor-cont-img">
-											<h3 class="underlined u-white c-white">Department of Biological Sciences and Engineering</h3>
+											<h3 class="underlined u-white c-white">Department of Data Science</h3>
 											<p class="c-white t-v-small t-o-ellipse">
-												Department of Biological Sciences and Engineering (BSE) at Indian Institute of Technology Palakkad aims at interdisciplinary biomedical research and biotechnology to improve human and animal health under ‘One Health’ concept.
+												The field of Data Science (DS) has grown from a bunch of "fancy" techniques that could "also" be applied into a set of well-founded methods to solve hard problems in various fields such as engineering and technology, science, and economics. This ubiquitous applicability of Data Science/ Artificial Intelligence (DS/AI) to a wide array of problems is a direct consequence of its generality, which in turn, has been fuelled by the complementary interaction between theory and application.
 											</p>
 										</div>
 									</div>
@@ -300,11 +326,83 @@
 							<div class="hor-block">
 								<a href="#">
 									<div class="hor-block-wrap">
-										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/chem.jpg"/>
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/electrical.jpg"/>
 										<div class="hor-cont-img">
-											<h3 class="underlined u-white c-white">Department of Chemistry</h3>
+											<h3 class="underlined u-white c-white">Department of Electrical Engineering</h3>
 											<p class="c-white t-v-small t-o-ellipse">
-												The Chemistry Department at IIT Palakkad started functioning with three visiting faculties for B. Tech. Teaching in the year 2015, but has expanded to a strength of eight permanent faculty members at Assistant Professor level.
+												The Department of Electrical Engineering (EE) at IIT Palakkad offers a vibrant environment for under graduate, post graduate education and research in many areas of Electrical Engineering. We are a team of 16 faculty, 180 students and 5 staff members engaged in cutting edge research and teaching in several frontier areas of Electrical Engineering.
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+														
+							<div class="hor-block">
+								<a href="#">
+									<div class="hor-block-wrap">
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/enviornmental.jpg"/>
+										<div class="hor-cont-img">
+											<h3 class="underlined u-white c-white">Environmental sciences and sustainable engineering Centre (ESSENCE)</h3>
+											<p class="c-white t-v-small t-o-ellipse">
+												The environmental sciences and sustainable engineering Centre (ESSENCE) at IIT Palakkad aims to provide an interdisciplinary platform to find ways to sustainably meet the needs of the present without compromising future generation’s ability to meet their own needs. We take inspiration from local community’s needs, sustainable development goals identified by the United Nations, and Paris Climate Agreement to focus our research efforts on ‘Enabling Responsible Development through Research in Environmental Science and Sustainable Engineering’.
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+														
+							<div class="hor-block">
+								<a href="#">
+									<div class="hor-block-wrap">
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/humanities.jpg"/>
+										<div class="hor-cont-img">
+											<h3 class="underlined u-white c-white">Department of Humanities and Social Sciences</h3>
+											<p class="c-white t-v-small t-o-ellipse">
+												The Humanities and Social Sciences at Indian Institute of Technology Palakkad is committed to active engagement in teaching, research and outreach activities. With its focus on interdisciplinary dialogues in humanities and social sciences, the Department carries out research and teaching in emerging fields of enquiries in behavioural and social sciences.
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+														
+							<div class="hor-block">
+								<a href="#">
+									<div class="hor-block-wrap">
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/math.jpg"/>
+										<div class="hor-cont-img">
+											<h3 class="underlined u-white c-white">Department of Mathematics </h3>
+											<p class="c-white t-v-small t-o-ellipse">
+												Department of Mathematics at IIT Palakkad is strongly committed to excellence in research and teaching. We envisage a period of fast growth leading to a strong and diverse Mathematics community at IIT Palakkad. The expertise of the faculties spread across pure and applied mathematics. The department offers a doctoral research program from 2017 for students who would like to pursue their career in mathematics
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							
+							
+							<div class="hor-block">
+								<a href="#">
+									<div class="hor-block-wrap">
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/mech.jpg"/>
+										<div class="hor-cont-img">
+											<h3 class="underlined u-white c-white">Department of Mechanical Engineering </h3>
+											<p class="c-white t-v-small t-o-ellipse">
+												Mechanical Engineering is a major discipline at IIT Palakkad that offers various programs at the UG and PG level. With a right balance of experienced and new faculty members ably supported by qualified staff, the discipline has a host of specialisations among the areas of mechanical engineering. 
+											</p>
+										</div>
+									</div>
+								</a>
+							</div>
+							
+							
+							<div class="hor-block">
+								<a href="#">
+									<div class="hor-block-wrap">
+										<img loading="lazy" onload="imageLoaded(this)" class="preload-img" src="/resources/pics/physics.jpg"/>
+										<div class="hor-cont-img">
+											<h3 class="underlined u-white c-white">Department of Physics </h3>
+											<p class="c-white t-v-small t-o-ellipse">
+												The Department of Physics at IIT Palakkad started functioning from August 2015, and is currently engaged in teaching and research in the forefront of experimental and theoretical physics. In July 2017, the Department has started its dedicated PhD program. The research interests and expertise of the members of the Department cover a wide range of areas, including astrophysics, string theory, theoretical and experimental condensed matter physics, statistical and soft-matter physics, experimental biophysics, and quantum information theory.
 											</p>
 										</div>
 									</div>
@@ -330,11 +428,13 @@
 				Footer content
 			</div>
 		</div>
+
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<script type="text/javascript">
 			window.onload = function()
 			{
 				document.querySelector(".loader-container").style.display = "none";
-				carousel(document.getElementById("slideshow1"));
+				//carousel(document.getElementById("slideshow1"));
 				setUp();
 			}
 		</script>
