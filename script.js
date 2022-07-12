@@ -4,22 +4,23 @@ var is_menu_opened = false;
 
 function setUp()
 {
-	mar = document.querySelector(".marquee-top");
+//	mar = document.querySelector(".marquee-top");
 	topbar = document.querySelector(".topbar");
 	topbar_banner = document.querySelector(".topbar .icon img");
 	parallex = document.querySelector(".parallex");
 	main = document.querySelector(".main");
 	explore = document.querySelector(".explore");
 	menuIcon = document.getElementById("menu-icon");
-
-	mar.onmouseover = function(e)
+	goToTop = document.querySelector("#go-to-top");
+	/*mar.onmouseover = function(e)
 	{
 		mar.stop();
 	}
 	mar.onmouseout = function(e)
 	{
 		mar.start();
-	}
+	}*/
+	
 	explore.onclick = function()
 	{
 		window.scrollTo({top: main.getBoundingClientRect().top - 150, behavior: "smooth"});
@@ -28,30 +29,107 @@ function setUp()
 
 	window.onscroll = function(e)
 	{
-			if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height)
-			{
-				topbar.classList.add("scrolled");
-			}
-			else
-			{
-				topbar.classList.remove("scrolled");
-			}
+		if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height)
+		{
+			topbar.classList.add("scrolled");
+		}
+		else if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height - 150)
+		{
+			goToTop.style.display = "flex";
+		}
+		else
+		{
+			topbar.classList.remove("scrolled");
+			goToTop.style.display = "none";
+		}
 	}
 	const swiper = new Swiper('.latest-widget-swiper', {
 		loop: true,
+		effect: 'creative',
+		creativeEffect: {
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        },
 		autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-     pagination: {
-	    el: '.banner-pagination',
-	    clickable: true,
+			delay: 2500,
+			disableOnInteraction: false,
 		},
-
-    navigation: {
-          nextEl: '.banner-next',
-          prevEl: '.banner-prev',
-    },
+		pagination: {
+			el: '.banner-pagination',
+			clickable: true,
+		},
+		
+	});
+	const swiper2 = new Swiper('.parallex-background', {
+		direction: 'vertical',
+		effect: 'fade',
+		loop: true,
+		lazy: true,
+		allowTouchMove: false,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		speed: 2000,
+		pagination: {
+			el: '.parallex-pagination',
+			clickable: true,
+		},
+	});
+	const swiper3 = new Swiper('.icons-swiper', {
+		direction: 'horizontal',
+		pagination: {
+			el: '.icons-pagination',
+			clickable: true,
+		},
+		navigation: {
+          nextEl: '.icons-next',
+          prevEl: '.icons-prev',
+          clickable: true,
+		},
+		scrollbar: {
+			el: '.icons-scrollbar',
+		},
+	});
+	const swiper4 = new Swiper('.department-swiper', {
+		direction: 'horizontal',
+		slidesPerView: 1.2,
+        spaceBetween: 0,
+        freeMode: true,
+        loop: true,
+        autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		scrollbar: {
+			el: '.department-scrollbar',
+		},
+	});
+	const swiper5 = new Swiper('.news-swiper', {
+		direction: 'vertical',
+		slidesPerView: 3,
+        spaceBetween: 0,
+        loop: true,
+        allowTouchMove: false,
+        autoplay: {
+			delay: 1500,
+			disableOnInteraction: false,
+		},
+		navigation: {
+          nextEl: '.news-down',
+          prevEl: '.news-up',
+          clickable: true,
+		},
+		speed: 1000,
 	});
 }
 function openMenu()
