@@ -200,9 +200,9 @@ body
 	padding: 15px;
 	margin-top: calc(100vh - 0px);
 	background: #fff;
-	border-radius: 30px 30px 0px 0px;
+	/*border-radius: 30px 30px 0px 0px;*/
 	z-index: 1;
-	box-shadow: 1px 1px 10px #121212;
+	/*box-shadow: 1px 1px 10px #121212;*/
 	transition: all 1s ease;
 	overflow: scroll;
 }
@@ -221,6 +221,7 @@ body
 	transform: translateX(-50%) !important;
 	border-radius: 50% 50% 0 0;
 	box-shadow: 1px 1px 10px #12121230;
+	transition: all .5s ease;
 }
 .explore i
 {
@@ -354,8 +355,8 @@ body
 {
     display: inline-block;
     position: relative;
-    width: calc(50% - 44px);
-    height: calc(100% - 24px);
+    width: calc(50% - 40px);
+    height: calc(100% - 20px);
     margin: 0px;
     padding: 10px;
     color: #12121290;
@@ -363,7 +364,9 @@ body
     z-index: 1;
     margin-left: 10px;
     margin-top: 15px;
-    border: 2px solid #fa7600;
+    border-radius: 10px;
+    box-shadow: 1.5px 1.5px 10px #12121240;
+    /*border: 2px solid #fa7600;*/
 }
 .latest-news h3
 {
@@ -420,13 +423,13 @@ body
 {
 	color: #fff;
 	text-decoration: none;
-}
+}/*
 .latest-news .news-swiper a:hover .dated-news
 {
 	border: 2px solid #fa760090;
 	box-shadow: 1px 1px 10px #fa760030;
-}
-.latest-news .news-swiper a:hover .content .body
+}*/
+.latest-news .news-swiper a:hover .content .head
 {
 	color: #fa760080;
 }
@@ -435,7 +438,7 @@ body
 	width: calc(100% - 4px);
 	height: 100px;
 	overflow: hidden;
-	border: 2px solid #12121290;
+	border-bottom: .3px solid #12121270;
 	display: block;
 	margin-bottom: 10px;
 	background: #fff;
@@ -443,26 +446,28 @@ body
 .dated-news .date
 {
 	display: inline-block;
-	width: calc(22% - 2px);
-	height: 100%;
+	width: calc(22% - 22px);
+	height: calc(100% - 20px);
 	float: left;
-	border-right: 2px solid #12121290;
+	border-radius: 6px;
+	margin: 10px;
+	border-right: 1px solid #fa7600;
 }
 .dated-news .date .day
 {
 	display: block;
 	width: 100%;
 	text-align: center;
-	font-size: 33px;
+	font-size: 20px;
 	font-weight: 800;
-	color: #fa7600;
+	color: #12121296;
 }
 .dated-news .date .month
 {
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-	font-size: 16px;
+	font-size: 13px;
 	color: #12121290;
 }
 .dated-news .date .year
@@ -470,7 +475,7 @@ body
 	display: inline-block;
 	width: 100%;
 	text-align: center;
-	font-size: 15px;
+	font-size: 13px;
 	color: #12121290;
 }
 .dated-news .content
@@ -489,7 +494,7 @@ body
 }
 .parallex
 {
-	position: fixed;
+	position: absolute;
 	top: 0px;
 	left: 0px;
 	right: 0px;
@@ -788,6 +793,7 @@ h6
 	color: var(--color-primary);
 }
 .c-white{color: #fff !important;}
+.c-primary{color: #fa7600 !important;}
 .t-v-small{font-size: 13px;}
 .t-o-ellipse{
 	text-overflow: ellipsis;

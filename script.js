@@ -17,18 +17,18 @@ function setUp()
 	
 	explore.onclick = function()
 	{
-		window.scrollTo({top: main.getBoundingClientRect().top - 150, behavior: "smooth"});
+		window.scrollTo({top: main.getBoundingClientRect().top - topbar.offsetHeight + 15, behavior: "smooth"});
 	}
 	menuIcon.addEventListener("click", openMenu);
 
 	window.onscroll = function(e)
 	{
 		var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-		if(window.scrollY >= $('.explore').offsetTop)
+		if(window.scrollY >= 60)
 		{
-			explore.style.opacity = 0;
-		}else{explore.style.opacity = 1;}
-		if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height)
+			explore.style.bottom = "-100%";
+		}else{explore.style.bottom = "0";}
+		if(window.scrollY >= $('.icons-swiper')[0].offsetTop + $('.icons-swiper')[0].getBoundingClientRect().height /2)
 		{
 			topbar.classList.add("scrolled");
 		}
