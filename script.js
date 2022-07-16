@@ -12,14 +12,8 @@ function setUp()
 	explore = document.querySelector(".explore");
 	menuIcon = document.getElementById("menu-icon");
 	goToTop = document.querySelector("#go-to-top");
-	/*mar.onmouseover = function(e)
-	{
-		mar.stop();
-	}
-	mar.onmouseout = function(e)
-	{
-		mar.start();
-	}*/
+	
+	block = document.getElementsByClassName("block");
 	
 	explore.onclick = function()
 	{
@@ -29,6 +23,11 @@ function setUp()
 
 	window.onscroll = function(e)
 	{
+		var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+		if(window.scrollY >= $('.explore').offsetTop)
+		{
+			explore.style.opacity = 0;
+		}else{explore.style.opacity = 1;}
 		if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height)
 		{
 			topbar.classList.add("scrolled");
@@ -42,6 +41,15 @@ function setUp()
 			topbar.classList.remove("scrolled");
 			goToTop.style.display = "none";
 		}
+		$(".block").each(function() {
+			var objectBottom = $(this).offset().top;
+			if (objectBottom < windowBottom) {
+				if ($(this).css("opacity")==0) {$(this).fadeTo(700,1);}
+			} else {
+				if ($(this).css("opacity")==1) {$(this).fadeTo(700,0);}
+			}
+			
+		});
 	}
 	const swiper = new Swiper('.latest-widget-swiper', {
 		loop: true,
@@ -96,9 +104,9 @@ function setUp()
           prevEl: '.icons-prev',
           clickable: true,
 		},
-		scrollbar: {
+		/*scrollbar: {
 			el: '.icons-scrollbar',
-		},
+		},*/
 	});
 	const swiper4 = new Swiper('.department-swiper', {
 		direction: 'horizontal',

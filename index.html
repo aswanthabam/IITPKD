@@ -28,6 +28,10 @@
 		
         <script src="./script.js" type="text/javascript" charset="utf-8"></script>
         
+        <!-- JQuery -->
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        
 		<style>
 			/*Loading animation Style*/
 			@keyframes loader-animate{
@@ -50,7 +54,7 @@
 			}
 			.loader-container{
 				display: flex;
-				background: #12121295;
+				background: #121212;
 				align-items: center;
 				justify-content: center;
 				min-height: 100vh;
@@ -94,11 +98,15 @@
 			.loader-container img
 			{
 				position: absolute;
+				display: block;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%,-50%);
-				width: 60px;
-				height: 60px;
+				width: 50px;
+				height: 50px;
+				padding: 8px;
+				background: #fff;
+				border-radius: 50%;
 			}
 		</style>
 	</head>
@@ -108,7 +116,8 @@
 			<div class="loader">
 				
 			</div>
-			<img src="/resources/icon.png">
+			<img src="/resources/logo_short.jpg">
+			<!--span>IIT Palakad</span-->
 		</div>
 		<div id="go-to-top" onclick="window.scrollTo(0,0);">
 			<i class='bx bx-up-arrow-alt'></i>
@@ -134,20 +143,21 @@
 				</div>
 			</div>
 		</div>
+		<div class="explore"><i class='bx bxs-chevron-up'></i></div>
 		<div class="parallex">
 			
 			<div class="parallex-background">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_1.jpg"/>
+						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_4.jpg"/>
           				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 					</div>
 					<div class="swiper-slide">
-						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_2.jpg"/>
+						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_5.jpg"/>
           				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           			</div>
 					<div class="swiper-slide">
-						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_3.jpg"/>
+						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_6.jpg"/>
           				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           			</div>
 				</div>
@@ -203,6 +213,7 @@
 										<center>Library</center>
 									</a>
 								</div>
+								
 							</div>
 							
 							<div class="swiper-slide">
@@ -246,34 +257,20 @@
 								</div>
 							</div>
 						</div>
-						<div class="icons-prev swiper-button-prev"></div>
-  						<div class="icons-next swiper-button-next"></div>
-  						<div class="icons-scrollbar swiper-scrollbar"></div>
+						<div class="icons-prev"><i class='bx bx-chevron-left'></i></div>
+  						<div class="icons-next"><i class='bx bxs-chevron-right'></i></div>
+  						<!--div class="icons-scrollbar swiper-scrollbar"></div-->
 					</div>
 				</div>
 			</div>
 		</div>
 		
 		<div class="main">
-			<center><h4 class="explore">Explore more <i class='bx bxs-chevron-down'></i></h4></center>
+			<center><h4 class="exp">Explore more <i class='bx bxs-chevron-down'></i></h4></center>
 			<div style="width: 100%;height: 30px;" id="main-m"></div>
 			
-			<div class="latest-widget">
-		    	<!-- <div id="slideshow1" class="slideshow">
-		    		<img onload="imageLoaded(this)" class="slide preload-img" src="/resources/pics/dsc03075.jpg" loading="lazy">
-		    		<img onload="imageLoaded(this)" class="slide preload-img" src="/resources/pics/dsc05502.jpg" loading="lazy">
-		    		<img onload="imageLoaded(this)" class="slide preload-img" src="/resources/pics/dsc3824.jpg" loading="lazy">
-		    		<!-
-			    	<div class="slide">
-				    	<img src="/resources/pics/dsc03075.jpg" loading="lazy">
-			    	</div>					   
-			    	<div class="slide">
-				    	<img src="/resources/pics/dsc05502.jpg" loading="lazy">
-			    	</div>					   
-			    	<div class="slide">
-				    	<img src="/resources/pics/dsc3824.jpg" loading="lazy">
-			    	</div>	--				   
-		    	</div> -->
+			<div class="latest-widget block">
+		    	
 				<div class="latest-widget-swiper">
 				<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
@@ -393,7 +390,7 @@
 				    </div>
 		    	</div>
 			</div>
-			<div class="content-block">
+			<div class="content-block block">
 				<div class="head">
 			<h2 class="underlined">Academics</h2></div>
 				<div class="content">
@@ -577,7 +574,20 @@
 				
 			</div>
 			<div class="content">
-				Footer content
+				<div class="footer-block">
+					<h4 class="underlined-left">Get in touch</h4>
+					
+					<a href="#"><i class='bx bx-phone'></i> 4598 76543210</a>
+					<a href="#"><i class='bx bxs-contact'></i> Palakad, Kerala, 672866</a>
+					<a href="#"><i class='bx bx-envelope'></i> iitpkd@iitpkd.com</a>
+					<a href="#"><i class='bx bxl-facebook-circle'></i> iitpkd</a>
+				</div>
+				<div class="footer-block">
+					snn
+				</div>
+				<div class="footer-block">
+					shsh
+				</div>
 			</div>
 		</div>
 
@@ -585,9 +595,9 @@
 		<script type="text/javascript">
 			window.onload = function()
 			{
+				setUp();
 				document.querySelector(".loader-container").style.display = "none";
 				//carousel(document.getElementById("slideshow1"));
-				setUp();
 			}
 		</script>
 	</body>
