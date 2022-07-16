@@ -1,0 +1,18 @@
+/*MEDIUM DEVICE TABLET*/
+.topbar
+{
+	height: 90px;
+}
+.topbar.scrolled .menu span#menu-icon > span
+{
+	background: none;
+	border: 0;
+}
+.topbar .menu > span.menu-icon > span > span{
+		display: none;
+}
+.topbar .icon img
+{
+	height: 60px;
+	margin: 10px;
+}

@@ -1,0 +1,119 @@
+/*MOBILE DEVICE*/
+.topbar
+{
+	height: 70px;
+	padding: 5px;
+}
+.topbar.scrolled
+{
+	height: 50px;
+}
+.topbar .icon
+{
+	display: inline-flex;
+		width: auto;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+}
+.topbar.scrolled .icon
+{
+	height: calc(100% - 20px);
+	padding: 10px;
+}
+.topbar .menu
+{
+	display: inline-block;
+		width: auto;
+		height: calc(100% - 0px);
+}
+.topbar.scrolled .menu
+{
+	height: calc(100% - 10px);
+}
+.topbar .icon img
+{
+	height: 50px;
+	margin: 10px;
+	padding: 0;
+	margin: 0;
+}
+.topbar .menu > span {
+		display: none;
+}
+.topbar .menu > span.menu-icon > span > span{
+		display: none;
+}
+.topbar .menu > span#menu-icon > span
+{
+	padding: 3px 5px 3px 5px;
+	border-radius: 10px;
+}
+.topbar .menu > span.menu-icon > span i.bx-menu
+{
+	font-size: 28px;
+}
+.topbar .menu span.menu-icon {
+		display: inline-flex;
+		width: 50px;
+}
+
+.main{
+	margin-top: calc(100vh - 0px);
+}
+.parallex .parallex-background .parallex-pagination
+{
+	position: absolute;
+	left: 8px;
+	bottom: 10px;
+}
+
+.latest-widget
+{
+    display: block;
+    height: auto;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.slideshow
+{
+    display: block;
+    width: 100%;
+    height: 250px;
+}
+.latest-widget .latest-news
+{
+    width: calc(100% - 24px);
+    height: 400px;	
+    padding: 10px;
+    margin-top: 25px;
+    margin-left: 0;
+}
+.latest-widget .latest-widget-swiper{
+  width: 100%;
+  height: 220px;
+}
+.latest-news .news-nav.news-up
+{
+	top: -480px;
+}
+.parallex
+{
+	position: fixed;
+	top: 0px;
+	
+	height: 100%;
+}
+.parallex .parallex-cont > div
+{
+	transform: translateY(0%);
+}
+.footer .content
+{
+	display: flex;
+	flex-direction: column;
+}
+.footer .content .footer-block
+{
+	width: calc(100% - 10px);
+}

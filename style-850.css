@@ -1,0 +1,27 @@
+/*TABLET SMALL DESIGN*/
+.topbar
+{
+	height: 100px;
+}
+.topbar .menu > span {
+		display: none;
+}
+.topbar .menu > span.menu-icon > span > span{
+		display: none;
+}
+.topbar .menu span.menu-icon {
+		display: inline-flex;
+		width: 50px;
+}
+.topbar .menu span.menu-icon i.bx-menu {
+		font-size: 35px;
+}
+.topbar .menu span#menu-icon > span
+{
+	background: #fa7600;
+}
+.topbar .icon img
+{
+	height: 70px;
+	margin: 10px;
+}

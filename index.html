@@ -4,7 +4,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width"/>
 		<title>IIT Palakad</title>
+
 		<link rel="stylesheet" href="./style.css"/>
+		<link rel="stylesheet" href="./style-500.css" media="screen and (max-width: 500px)" />
+		<link rel="stylesheet" href="./style-850.css" media="screen and (max-width: 850px)" />
+		<link rel="stylesheet" href="./style-1000.css" media="screen and (max-width: 1000px)" />
 
 		<!-- Box Icon -->
 		
@@ -15,14 +19,18 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400&family=Exo+2:ital,wght@0,300;1,200&family=Finlandica:ital@0;1&family=Kanit:ital,wght@0,300;1,200&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+
+		<!-- Pre loadable files -->
+
+		<link rel="preload" href="/resources/logo_short.jpg">
         
         <!-- Swiper javascript -->
         
-		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="/js/swiper/swiper-bundle.css"/>
 		
 		<!-- Boostrap Icons -->
 		
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="/css//bootstrap-icons.css">
 		
 		<!-- My Java Script -->
 		
@@ -143,7 +151,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="explore"><i class='bx bxs-chevron-up'></i></div>
+		
 		<div class="parallex">
 			
 			<div class="parallex-background">
@@ -262,6 +270,8 @@
   						<!--div class="icons-scrollbar swiper-scrollbar"></div-->
 					</div>
 				</div>
+
+				<div class="explore"><i class='bx bxs-chevron-up'></i></div>
 			</div>
 		</div>
 		
@@ -591,12 +601,14 @@
 			</div>
 		</div>
 
-		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script src="/js/swiper/swiper-bundle.min.js"></script>
+
 		<script type="text/javascript">
 			window.onload = function()
 			{
-				setUp();
 				document.querySelector(".loader-container").style.display = "none";
+				setUp();
+				
 				//carousel(document.getElementById("slideshow1"));
 			}
 		</script>
