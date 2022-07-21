@@ -5,7 +5,7 @@
 	height: auto;
 	min-height: 100vh;
 	padding: 15px;
-	margin-top: calc(100vh - 150px);
+	margin-top: calc(100vh - 0px);
 	background: #fff;
 	/*border-radius: 30px 30px 0px 0px;*/
 	z-index: 1;
@@ -446,4 +446,69 @@
 	border-radius: 5px !important;
 	background-color:#fa7600 !important;
 	width:30px !important;
+}
+@media only screen and (max-width: 1000px)
+{
+
+}
+@media only screen and (max-width: 850px)
+{
+
+}
+@media only screen and (max-width: 500px)
+{
+	/*MOBILE DEVICE*/
+
+
+	.main{
+		margin-top: calc(100vh - 0px) !important;
+	}
+	.parallex .parallex-background .parallex-pagination
+	{
+		position: absolute;
+		left: 8px;
+		bottom: 10px;
+	}
+
+	.latest-widget
+	{
+	    display: block;
+	    height: auto;
+	    margin-bottom: 0;
+	    overflow: visible;
+	}
+	.slideshow
+	{
+	    display: block;
+	    width: 100%;
+	    height: 250px;
+	}
+	.latest-widget .latest-news
+	{
+	    width: calc(100% - 20px);
+	    height: 400px;	
+	    padding: 10px;
+	    margin-right: 0px;
+	    margin-top: 25px;
+	    margin-left: 0px;
+	}
+	.latest-widget .latest-widget-swiper{
+	  width: 100%;
+	  height: 220px;
+	  overflow: hidden;
+	}
+	.latest-news .news-nav.news-up
+	{
+		top: -480px;
+	}
+	.parallex
+	{
+		position: absolute;
+		top: 0px;
+		height: 100%;
+	}
+	.parallex .parallex-cont > div
+	{
+		transform: translateY(0%);
+	}
 }

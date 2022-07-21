@@ -1,7 +1,7 @@
 var slideIndex = 0;
 var is_menu_opened = false;
 var topbar_height = "100px";
-
+var innerWidth = window.innerWidth;
 function setUp()
 {
 //	mar = document.querySelector(".marquee-top");
@@ -111,7 +111,7 @@ function setUp()
 	});
 	const swiper4 = new Swiper('.department-swiper', {
 		direction: 'horizontal',
-		slidesPerView: 1.2,
+		slidesPerView:(innerWidth > 850) ? 3 : 1.2,
         spaceBetween: 0,
         freeMode: true,
         loop: true,

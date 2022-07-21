@@ -3,6 +3,10 @@
 {
 	height: 90px;
 }
+.topbar.menu-opened .full-menu
+{
+	display: block;
+}
 .topbar.scrolled .menu span#menu-icon > span
 {
 	background: none;

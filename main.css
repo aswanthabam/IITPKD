@@ -167,45 +167,9 @@ body
 {
 	margin: 0px;
 }
-.topbar.menu-opened
-{
-	margin: 0;
-	height: auto;
-	background: #fff;
-	box-shadow: 1px 1px 10px #12121230;
-}
-.topbar.menu-opened .full-menu
-{
-	opacity: 1;
-}
-.topbar.menu-opened.scrolled
-{
-	height: auto;
-}
-.topbar.menu-opened .showable-1
-{
-	padding-top: 10px;
-}
-.topbar.menu-opened .menu
-{
-	height: auto !important;
-	margin: 25px !important;
-}
-.topbar.menu-opened .menu span > a
-{
-	color: #12121290;
-}
-.topbar.menu-opened .menu span#menu-icon > span
-{
-	background: none;
-	border: 0;
-}
-.topbar.menu-opened .menu span i.bx-menu
-{
-	color: #12121290;
-}
 .topbar .full-menu
 {
+	display: none;
 	width: calc(100% - 0px);
 	height: 0;
 	opacity: 0;
@@ -229,9 +193,10 @@ body
 .topbar.scrolled 
 {
 	padding: 5px;
-	background: #121212;
+	background: #fff;
+	box-shadow: 1px 1px 10px #12121230;
 }
-/*
+
 .topbar.scrolled  .menu span{
 	color: #12121290 !important;
 }
@@ -243,7 +208,7 @@ body
 {
 	color: #12121290;
 }
-*/
+
 .main
 {
 	width: calc(100% - 30px);
@@ -337,6 +302,7 @@ body
 	align-items: center;
 	justify-content: center;
 	width: calc(100% - 50px);
+	min-height: 100px;
 	margin: 15px;
 	padding: 10px;
 	color: #fff;
@@ -344,11 +310,12 @@ body
 .footer .content .footer-block
 {
 	width: calc(33% - 10px);
-	height: auto;
+	height: 100%;
 	margin: 5px;
-	min-height: 100px;
+	min-height: 100%;
 	color: #fff;
 	text-align: left;
+	border-right: 1px solid #ffffff30;
 }
 .footer .content .footer-block h4
 {
@@ -461,4 +428,175 @@ h6
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
+}
+@media only screen and (max-width: 1000px)
+{
+	/*MEDIUM DEVICE TABLET*/
+	.topbar
+	{
+		height: 90px;
+	}
+	.topbar.scrolled .menu span#menu-icon > span
+	{
+		background: none;
+		border: 0;
+	}
+	.topbar .menu > span.menu-icon > span > span{
+			display: none;
+	}
+	.topbar .icon img
+	{
+		height: 60px;
+		margin: 10px;
+	}
+}
+@media only screen and (max-width: 850px)
+{
+	/*TABLET SMALL DESIGN*/
+	.topbar
+	{
+		height: 100px;
+	}
+	.topbar .menu > span {
+			display: none;
+	}
+	.topbar .menu > span.menu-icon > span > span{
+			display: none;
+	}
+	.topbar .menu span.menu-icon {
+			display: inline-flex;
+			width: 50px;
+	}
+	.topbar .menu span.menu-icon i.bx-menu {
+			font-size: 35px;
+	}
+	.topbar .menu span#menu-icon > span
+	{
+		background: #fa7600;
+	}
+	.topbar .icon img
+	{
+		height: 70px;
+		margin: 10px;
+	}
+	.topbar.menu-opened
+	{
+		margin: 0;
+		height: auto;
+		background: #fff;
+		box-shadow: 1px 1px 10px #12121230;
+	}
+	.topbar.menu-opened .icon
+	{
+		height: 100px;
+	}
+	.topbar.menu-opened .full-menu
+	{
+		display: block;
+	}
+	.topbar.menu-opened.scrolled
+	{
+		height: auto;
+	}
+	.topbar.menu-opened .showable-1
+	{
+		padding-top: 10px;
+	}
+	.topbar.menu-opened .menu
+	{
+		height: auto !important;
+		margin: 25px !important;
+	}
+	.topbar.menu-opened .menu span > a
+	{
+		color: #12121290;
+	}
+	.topbar.menu-opened .menu span#menu-icon > span
+	{
+		background: none;
+		border: 0;
+	}
+	.topbar.menu-opened .menu span i.bx-menu
+	{
+		color: #12121290;
+	}
+}
+@media only screen and (max-width: 500px)
+{
+	/*MOBILE DEVICE*/
+	.topbar
+	{
+		height: 70px;
+		padding: 5px;
+	}
+	.topbar.menu-opened .menu
+	{
+		height: auto !important;
+		margin: 10px !important;
+	}
+
+	.topbar.scrolled
+	{
+		/*height: 50px;
+		padding: 5px;*/
+	}
+	.topbar .icon
+	{
+		display: inline-flex;
+			width: auto;
+			height: 100%;
+			padding: 0px;
+			margin: 0px;
+	}
+	.topbar.scrolled .icon
+	{
+	/*	height: calc(100% - 20px);
+		padding: 10px;*/
+	}
+	.topbar .menu
+	{
+		display: inline-block;
+			width: auto;
+			height: calc(100% - 0px);
+	}
+	.topbar.scrolled .menu
+	{
+		height: calc(100% - 10px);
+	}
+	.topbar .icon img
+	{
+		height: 50px;
+		margin: 10px;
+		padding: 0;
+		margin: 0;
+	}
+	.topbar .menu > span {
+			display: none;
+	}
+	.topbar .menu > span.menu-icon > span > span{
+			display: none;
+	}
+	.topbar .menu > span#menu-icon > span
+	{
+		padding: 3px 5px 3px 5px;
+		border-radius: 10px;
+	}
+	.topbar .menu > span.menu-icon > span i.bx-menu
+	{
+		font-size: 28px;
+	}
+	.topbar .menu span.menu-icon {
+			display: inline-flex;
+			width: 50px;
+	}
+
+	.footer .content
+	{
+		display: flex;
+		flex-direction: column;
+	}
+	.footer .content .footer-block
+	{
+		width: calc(100% - 10px);
+	}
 }
