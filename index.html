@@ -6,10 +6,15 @@
 		<title>IIT Palakad</title>
 
 		<link rel="stylesheet" href="./style.css"/>
-		<link rel="stylesheet" href="./style-500.css" media="screen and (max-width: 500px)" />
-		<link rel="stylesheet" href="./style-850.css" media="screen and (max-width: 850px)" />
-		<link rel="stylesheet" href="./style-1000.css" media="screen and (max-width: 1000px)" />
-
+		<link rel="stylesheet" href="./style-1000.css" media="only screen and (max-width: 1000px)" />
+		<link rel="stylesheet" href="./style-850.css" media="only screen and (max-width: 850px)" />
+		<link rel="stylesheet" href="./style-500.css" media="only screen and (max-width: 500px)" />
+		
+		<link rel="stylesheet" href="/main.css"/>
+		<link rel="stylesheet" href="/main-1000.css" media="only screen and (max-width: 1000px)" />
+		<link rel="stylesheet" href="/main-850.css" media="only screen and (max-width: 850px)" />
+		<link rel="stylesheet" href="/main-500.css" media="only screen and (max-width: 500px)" />
+		
 		<!-- Box Icon -->
 		
 		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -134,20 +139,39 @@
 			Sidebar
 		</div>
 		<div class="topbar">
-			<div class="icon">
-				<img loading="lazy" src="/resources/banner.png">
-			</div>
-			<!-- <div class="name">IIT Palakad</div> -->
-			<div class="menu">
-				<span><a class="link-1" href="#">Home</a></span>
-				<span><a class="link-1" href="#">Departments</a></span>
-				<span><a class="link-1" href="#">Library</a></span>
-				<span><a class="link-1" href="#">Partner With Us</a></span>
-				<span id="menu-icon" class="menu-icon"><span><i class='bx bx-menu'></i><span> Menu</span></span></span>
-			</div>
 			<div id="full-menu" class="full-menu">
+				<div class="head">
+					<div class="cont">
+						
+					</div>
+					<div onclick="openMenu()" class="close">
+						<i class='bx bx-x' ></i>
+					</div>
+				</div>
 				<div class="item">
-					<span>Home 1</span>
+					<span><a class="link-1" href="#">Home</a></span>
+				</div>
+				<div class="item">
+					<span><a class="link-1" href="/Departments/department.html">Departments</a></span>
+				</div>
+				<div class="item">
+					<span><a class="link-1" href="#">Library</a></span>
+				</div>
+				<div class="item">
+					<span><a class="link-1" href="#">Partner With Us</a></span>
+				</div>
+			</div>
+			<div class="showable-1">
+				<div class="icon">
+					<img loading="lazy" src="/resources/banner.png">
+				</div>
+				<!-- <div class="name">IIT Palakad</div> -->
+				<div class="menu">
+					<span><a class="link-1" href="#">Home</a></span>
+					<span><a class="link-1" href="/Departments/department.html">Departments</a></span>
+					<span><a class="link-1" href="#">Library</a></span>
+					<span><a class="link-1" href="#">Partner With Us</a></span>
+					<span id="menu-icon" class="menu-icon"><span><i class='bx bx-menu'></i><span> Menu</span></span></span>
 				</div>
 			</div>
 		</div>
@@ -158,15 +182,12 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_4.jpg"/>
-          				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
 					</div>
 					<div class="swiper-slide">
 						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_5.jpg"/>
-          				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           			</div>
 					<div class="swiper-slide">
 						<img class="swiper-shutters-image swiper-lazy" src="/resources/pics/clg_6.jpg"/>
-          				<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
           			</div>
 				</div>
 				
@@ -276,11 +297,10 @@
 		</div>
 		
 		<div class="main">
-			<div style="width: 100%;height: 30px;" id="main-m"></div>
 			
-			<div class="latest-widget block">
+			<div class="latest-widget">
 		    	
-				<div class="latest-widget-swiper">
+				<div class="latest-widget-swiper block">
 				<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
 					<!-- Slides -->
@@ -295,7 +315,7 @@
 						<span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
 					</div>
 				</div>
-		    	<div class="latest-news">
+		    	<div class="latest-news block">
 		    	    <h3 class="c-primary">What's New?</h3>
 		    	    <div class="news-swiper">
 	    	    		<div class="swiper-wrapper">
@@ -603,10 +623,11 @@
 		<script src="/js/swiper/swiper-bundle.min.js"></script>
 
 		<script type="text/javascript">
-			window.onload = function()
+			document.addEventListener("DOMContentLoaded",ready);
+			function ready()
 			{
-				document.querySelector(".loader-container").style.display = "none";
 				setUp();
+				document.querySelector(".loader-container").style.display = "none";
 				
 				//carousel(document.getElementById("slideshow1"));
 			}
