@@ -1,48 +1,36 @@
 var slideIndex = 0;
 var is_menu_opened = false;
+var topbar_height = "100px";
+var innerWidth = window.innerWidth;
 
 
 function setUp()
 {
-//	mar = document.querySelector(".marquee-top");
+
 	topbar = document.querySelector(".topbar");
 	topbar_banner = document.querySelector(".topbar .icon img");
-//	parallex = document.querySelector(".parallex");
 	main = document.querySelector(".main");
-//	explore = document.querySelector(".explore");
 	menuIcon = document.getElementById("menu-icon");
 	goToTop = document.querySelector("#go-to-top");
 	
 	block = document.getElementsByClassName("block");
 	
-/*	explore.onclick = function()
-	{
-		window.scrollTo({top: main.getBoundingClientRect().top - topbar.offsetHeight + 15, behavior: "smooth"});
-	//	window.onscroll();
-	}
-*/
 	menuIcon.addEventListener("click", openMenu);
 
 	window.onscroll = function(e)
 	{
 		var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-		if(window.scrollY >= 60)
-		{
-		//	explore.style.bottom = "-100%";
-		}else{explore.style.bottom = "0";}
-		if(window.scrollY >= $('.icons-swiper')[0].offsetTop + $('.icons-swiper')[0].getBoundingClientRect().height /2)
-		{
-			topbar.classList.add("scrolled");
-		}
-		else if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height - 150)
-		{
-			goToTop.style.display = "flex";
-		}
-		else
-		{
-			topbar.classList.remove("scrolled");
-			goToTop.style.display = "none";
-		}
+		if(window.scrollY >= 100)goToTop.style.display = "flex";else goToTop.style.display="none";
+		
+		// if(window.scrollY >= 100)
+		// {
+		// 	topbar.classList.add("scrolled");
+		// }
+		// else
+		// {
+		// 	topbar.classList.remove("scrolled");
+		// 	//goToTop.style.display = "none";
+		// }
 		$(".block").each(function() {
 			var objectBottom = $(this).offset().top;
 			if (objectBottom < windowBottom) {
@@ -53,6 +41,45 @@ function setUp()
 			
 		});
 	}
+	const swiper = new Swiper('.main-swiper', {
+		loop: true,
+		effect: 'creative',
+		creativeEffect: {
+          prev: {
+            shadow: true,
+            origin: "left center",
+            translate: ["-5%", 0, -200],
+            rotate: [0, 100, 0],
+          },
+          next: {
+            origin: "right center",
+            translate: ["5%", 0, -200],
+            rotate: [0, -100, 0],
+          },
+        },
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.banner-pagination',
+			clickable: true,
+		},
+		
+	});
+	
+}
+function openSubMenu(elem)
+{
+	elem.parentElement.classList.add('opened');
+//	elem.onclick = null;
+}
+function closeSubMenu(elem)
+{
+	elem = elem.parentElement.parentElement;
+//	elem.setAttribute("onclick","openSubMenu(this);");
+	elem.classList.remove("opened");
+	console.log(elem);
 }
 function openMenu()
 {
@@ -60,12 +87,14 @@ function openMenu()
 	menu = document.getElementById("full-menu");
 	if(!is_menu_opened){
 		menu.style.height = "auto";
-		menu.style.opacity = 1;
+	//	menu.style.opacity = 1;
+		topbar.classList.add("menu-opened");
 		is_menu_opened = true;
 	}
 	else{
 		menu.style.height = "0px";
-		menu.style.opacity = 0;
+	//	menu.style.opacity = 0;
+		topbar.classList.remove("menu-opened");
 		is_menu_opened = false;
 	}
 }
