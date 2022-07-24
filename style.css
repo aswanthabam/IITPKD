@@ -5,7 +5,7 @@
 
 .glowIn span {
 	color: #fff;
-	animation: glow-in 0.2s both;
+	animation: glow-in 0.5s both;
 	font-size: 20px;
 	transition: all 0.5s ease;
 }
@@ -27,7 +27,7 @@
     opacity: 1;
   }
   to {
-    opacity: 0.7;
+    opacity: 0.9;
   }
 }
 .main
@@ -61,8 +61,8 @@
 }
 .explore i
 {
-	color: #ffffff90;
-	font-size: 45px;
+	color: #ffffff99;
+	font-size: 40px;
 	transform: translateY(0);
 }
 .first-block
@@ -461,16 +461,21 @@
 	color: #fa7600;
 	z-index: 0 !important;
 }
+.department-swiper .swiper-wrapper .swiper-slide a
+{
+	border-radius: 10px;
+}
 .department-swiper .swiper-wrapper .swiper-slide
 {
 	width: 100%;
 	height: 100%;
 	-webkit-tap-highlight-color: transparent;
+	border-radius: 10px;
 }
 .department-swiper .swiper-wrapper .swiper-slide .swiper-slide-wrap
 {
 	width: calc(100% - 30px);
-	height: calc(100% - 30px);
+	height: calc(100% - 40px);
 	margin: 15px;
 	transition: all 0.5s ease;
 	border-radius: 10px;
@@ -481,19 +486,21 @@
 	height: calc(100% - 20px);
 	margin: 10px;
 	box-shadow: 1px 1px 10px #fa7600;
-
+	border-radius: 10px;
 }
 .department-swiper .swiper-wrapper .swiper-slide a:hover .swiper-slide-wrap .hor-cont-img
 {
 	width: calc(100% - 30px);
 	height: calc(100% - 30px);
 	padding: 15px;
+	border-radius: 10px;
 }
 .department-swiper .swiper-wrapper .swiper-slide .swiper-slide-wrap img
 {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	border-radius: 10px;
 }
 .department-swiper .swiper-wrapper .swiper-slide .swiper-slide-wrap .hor-cont-img
 {
@@ -507,6 +514,7 @@
 	background: #12121280;
 	overflow: hidden;
 	transition: all 0.5s ease;
+	border-radius: 10px;
 }
 .department-swiper .swiper-wrapper .swiper-slide a
 {

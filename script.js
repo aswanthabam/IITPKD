@@ -81,7 +81,7 @@ function setUp()
 	  letters.forEach((letter, i) => {
 	    let span = document.createElement("span");
 	    span.textContent = letter;
-	    span.style.animationDelay = `${i * 0.05}s`;
+	    span.style.animationDelay = `${i * 0.04}s`;
 	    glowInText.append(span);
 	  });
 	});
@@ -127,22 +127,17 @@ function setUp()
 	window.onscroll = function(e)
 	{
 		var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-		if(window.scrollY >= 60)
-		{
-			explore.style.bottom = "-100%";
-		}else{explore.style.bottom = "100px";}
+		if(window.scrollY >= 60){explore.style.bottom = "-100%";}else{explore.style.bottom = "100px";}
+		if(window.scrollY >= 100)goToTop.style.display = "flex";else goToTop.style.display="none";
+		
 		if(window.scrollY >= $('.parallex')[0].getBoundingClientRect().height /5)
 		{
 			topbar.classList.add("scrolled");
 		}
-		else if(window.scrollY >= main.offsetTop - topbar.getBoundingClientRect().height - 150)
-		{
-			goToTop.style.display = "flex";
-		}
 		else
 		{
 			topbar.classList.remove("scrolled");
-			goToTop.style.display = "none";
+			//goToTop.style.display = "none";
 		}
 		$(".block").each(function() {
 			var objectBottom = $(this).offset().top;

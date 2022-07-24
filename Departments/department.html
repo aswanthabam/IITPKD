@@ -4,17 +4,17 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width"/>
 		<title>IIT Palakad</title>
+
+		<link rel="stylesheet" href="./style.css"/><!-- 
+		<link rel="stylesheet" href="./style-1000.css" media="only screen and (max-width: 1000px)" />
+		<link rel="stylesheet" href="./style-850.css" media="only screen and (max-width: 850px)" />
+		<link rel="stylesheet" href="./style-500.css" media="only screen and (max-width: 500px)" /> -->
 		
-		<link rel="stylesheet" href="/Departments/style.css"/>
-		<link rel="stylesheet" href="/Departments/style-1000.css" media="only screen and (max-width: 1000px)" />
-		<link rel="stylesheet" href="/Departments/style-850.css" media="only screen and (max-width: 850px)" />
-		<link rel="stylesheet" href="/Departments/style-500.css" media="only screen and (max-width: 500px)" />
-		
-		<link rel="stylesheet" href="/main.css"/>
+		<link rel="stylesheet" href="/main.css"/><!-- 
 		<link rel="stylesheet" href="/main-1000.css" media="only screen and (max-width: 1000px)" />
 		<link rel="stylesheet" href="/main-850.css" media="only screen and (max-width: 850px)" />
-		<link rel="stylesheet" href="/main-500.css" media="only screen and (max-width: 500px)" />
-
+		<link rel="stylesheet" href="/main-500.css" media="only screen and (max-width: 500px)" /> -->
+		
 		<!-- Box Icon -->
 		
 		<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -39,7 +39,7 @@
 		
 		<!-- My Java Script -->
 		
-        <script src="/Departments/script.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./script.js" type="text/javascript" charset="utf-8"></script>
         
         <!-- JQuery -->
         
@@ -76,6 +76,9 @@
 				padding: 0px;
 				position: fixed;
 				top: 0px;
+				left: 0;
+				bottom: 0;
+				right: 0;
 				z-index: 20;
 			}
 			.loader-container .loader{
@@ -142,28 +145,46 @@
 			<div id="full-menu" class="full-menu">
 				<div class="head">
 					<div class="cont">
-						
+						<div class="icon">
+							<img src="/resources/banner3.png" alt="" />
+						</div>
 					</div>
 					<div onclick="openMenu()" class="close">
 						<i class='bx bx-x' ></i>
 					</div>
 				</div>
 				<div class="item">
-					<span><a class="link-1" href="#">Home</a></span>
+					<span><a class="link-1" href="#"><i class='bx bx-home'></i> Home</a></span>
+				</div>
+				<div class="item sub">
+					<span><i class='bx bx-home'></i> Departments</span>
+					<span class="more"><i class='bx bxs-chevron-right' ></i></span>
+					<div class="item-clicker" onclick="openSubMenu(this);"></div>
+					<div class="sub-item">
+						<div onclick="closeSubMenu(this);" class="item item-back">
+							<span><i class='bx bx-chevron-left'></i> Menu</span>
+						</div>
+						<div class="item">
+							<span><a class="link-1" href="/Departments/department.html"> Electronics</a></span>
+						</div>
+						<div class="item">
+							<span><a class="link-1" href="/Departments/department.html"> Computer Science</a></span>
+						</div>
+						<div class="item">
+							<span><a class="link-1" href="/Departments/department.html"> Mechanical</a></span>
+						</div>
+					</div>
 				</div>
 				<div class="item">
-					<span><a class="link-1" href="/Departments/department.html">Departments</a></span>
+					<span><a class="link-1" href="#"><i class='bx bx-home'></i> Library</a></span>
 				</div>
 				<div class="item">
-					<span><a class="link-1" href="#">Library</a></span>
-				</div>
-				<div class="item">
-					<span><a class="link-1" href="#">Partner With Us</a></span>
+					<span><a class="link-1" href="#"><i class='bx bx-home'></i> Partner With Us</a></span>
 				</div>
 			</div>
 			<div class="showable-1">
 				<div class="icon">
-					<img loading="lazy" src="/resources/banner.png">
+					<img loading="lazy" src="/resources/banner2.png">
 				</div>
 				<!-- <div class="name">IIT Palakad</div> -->
 				<div class="menu">
@@ -176,16 +197,9 @@
 			</div>
 		</div>
 		
+		
 		<div class="main">
 			
-			<div class="content-block block">
-				<div class="head">
-					<h2 class="underlined">Academics</h2>
-				</div>
-				<div class="content">
-					
-				</div>
-			</div>
 		</div>
 		<div class="footer">
 			<div class="search">
@@ -201,16 +215,32 @@
 				<div class="footer-block">
 					<h4 class="underlined-left">Get in touch</h4>
 					
+					<a href="#"><i class='bi bi-geo-alt-fill'></i> Indian Institute of Technology Palakkad,
+Ahalia Integrated Campus,
+Kozhippara P. O | Palakkad,
+Kerala | Pin: 678557</a>
 					<a href="#"><i class='bx bx-phone'></i> 4598 76543210</a>
 					<a href="#"><i class='bx bxs-contact'></i> Palakad, Kerala, 672866</a>
 					<a href="#"><i class='bx bx-envelope'></i> iitpkd@iitpkd.com</a>
 					<a href="#"><i class='bx bxl-facebook-circle'></i> iitpkd</a>
 				</div>
 				<div class="footer-block">
-					snn
-				</div>
-				<div class="footer-block">
-					shsh
+					<h4 class="underlined-left">Links</h4>
+					<div class="links">
+					<a class="link" href="#">ARIIA 2021</a>
+					<a class="link" href="#">Events</a>
+					<a class="link" href="#">TFS - Student media body</a>
+					<a class="link" href="#">International Relations</a>
+					<a class="link" href="#">Tenders</a>
+					<a class="link" href="#">Purchase Procedures</a>
+					<a class="link" href="#">Policies</a>
+					<a class="link" href="#">IRINS</a>
+					<a class="link" href="#">NIRF</a>
+					<a class="link" href="#">Technology IHub Foundation</a>
+					<a class="link" href="#">Ethics Committee</a>
+					<a class="link" href="#">Mail</a>
+					<a class="link" href="#">Telephone Directory</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -218,7 +248,8 @@
 		<script src="/js/swiper/swiper-bundle.min.js"></script>
 
 		<script type="text/javascript">
-			window.onload = function()
+			document.addEventListener("DOMContentLoaded",ready);
+			function ready()
 			{
 				setUp();
 				document.querySelector(".loader-container").style.display = "none";
