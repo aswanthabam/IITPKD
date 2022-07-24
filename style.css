@@ -5,6 +5,48 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }*/
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
+
+.container {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.text {
+  font-weight: 100;
+  font-size: 28px;
+  color: #fafafa;
+}
+.dud {
+  color: #757575;
+}
+
+.glowIn {
+  color: #fff;
+}
+.glowIn span {
+	color: #fff;
+	animation: glow-in 0.2s both;
+	font-size: 20px;
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 25px #121212;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
 .main
 {
 	height: auto;
@@ -274,6 +316,7 @@
 	width: 100%;
 	height: 100vh;
 	z-index: -1;
+	overflow: hidden;
 }
 .parallex .parallex-background
 {
@@ -308,6 +351,11 @@
 	height: 100%;
 	background: #12121280;
 	z-index: 5;
+}
+.parallex .parallex-cont .cont
+{
+	width: calc(100% - 50px);
+	margin: 25px;
 }
 .parallex .parallex-cont > div
 {
@@ -440,6 +488,7 @@
 	height: calc(100% - 30px);
 	margin: 15px;
 	transition: all 0.5s ease;
+	border-radius: 10px;
 }
 .department-swiper .swiper-wrapper .swiper-slide a:hover .swiper-slide-wrap
 {
@@ -447,6 +496,7 @@
 	height: calc(100% - 20px);
 	margin: 10px;
 	box-shadow: 1px 1px 10px #fa7600;
+
 }
 .department-swiper .swiper-wrapper .swiper-slide a:hover .swiper-slide-wrap .hor-cont-img
 {
