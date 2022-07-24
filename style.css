@@ -594,15 +594,19 @@
 		top: 0px;
 		height: 100vh;
 	}
-	.parallex .parallex-cont > div
-	{
-		transform: translateY(0%);
-	}
 	.parallex .parallex-cont .cont
 	{
+		opacity: 0;
+		transform: translateY(50%);
 		width: calc(100% - 50px);
 		margin-left: 25px;
 		margin-right: 25px;
 		text-align: center;
+		transition: all 1s ease;
+	}
+	.parallex .parallex-cont .cont.show
+	{
+		opacity: 1;
+		transform: translateY(0%);
 	}
 }

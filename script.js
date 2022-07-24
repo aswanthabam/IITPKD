@@ -70,6 +70,10 @@ class TextScramble {
 
 function setUp()
 {
+	mm = document.querySelector(".parallex .parallex-cont .cont");
+	setTimeout(function () {
+		mm.classList.add("show");
+	},200);
 	glowInTexts = document.querySelectorAll(".glowIn");
 	glowInTexts.forEach(glowInText => {
 	  let letters = glowInText.textContent.split("");
@@ -81,7 +85,7 @@ function setUp()
 	    glowInText.append(span);
 	  });
 	});
-	
+
 	// const phrases = [
 	//   'you\'re going to realize',
 	//   'just as I did',
