@@ -1,35 +1,18 @@
-/*body
-{
-	background: url('/resources/pics/clg_6.jpg');
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: no-repeat;
-}*/
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100';
-
-.container {
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-.text {
-  font-weight: 100;
-  font-size: 28px;
-  color: #fafafa;
-}
-.dud {
-  color: #757575;
-}
 
 .glowIn {
   color: #fff;
 }
+
 .glowIn span {
 	color: #fff;
 	animation: glow-in 0.2s both;
 	font-size: 20px;
+	transition: all 0.5s ease;
+}
+.glowIn span:hover {
+	color: #fff !important;
+	text-shadow: 0 0 25px #121212;
+	opacity: 1;
 }
 
 @keyframes glow-in {
@@ -354,8 +337,10 @@
 }
 .parallex .parallex-cont .cont
 {
-	width: calc(100% - 50px);
-	margin: 25px;
+	width: calc(100% - 400px);
+	margin-left: 200px;
+	margin-right: 200px;
+	text-align: center;
 }
 .parallex .parallex-cont > div
 {
@@ -551,13 +536,17 @@
 }
 @media only screen and (max-width: 850px)
 {
-
+	.parallex .parallex-cont .cont
+	{
+		width: calc(100% - 100px);
+		margin-left: 50px;
+		margin-right: 50px;
+		text-align: center;
+	}
 }
 @media only screen and (max-width: 500px)
 {
 	/*MOBILE DEVICE*/
-
-
 	.main{
 		margin-top: calc(100vh - 0px) !important;
 	}
@@ -608,5 +597,12 @@
 	.parallex .parallex-cont > div
 	{
 		transform: translateY(0%);
+	}
+	.parallex .parallex-cont .cont
+	{
+		width: calc(100% - 50px);
+		margin-left: 25px;
+		margin-right: 25px;
+		text-align: center;
 	}
 }
