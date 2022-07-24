@@ -1,10 +1,14 @@
-
+/*body
+{
+	background: url('/resources/pics/clg_6.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}*/
 .main
 {
-	width: calc(100% - 30px);
 	height: auto;
 	min-height: 100vh;
-	padding: 15px;
 	margin-top: calc(100vh - 0px);
 	background: #fff;
 	/*border-radius: 30px 30px 0px 0px;*/
@@ -18,9 +22,9 @@
 	-webkit-tap-highlight-color: transparent;
 	padding: 5px 15px 0px 15px;
 	cursor: pointer;
-	background: #fff;
+	background: none;
 	position: absolute;
-	bottom: 0px;
+	bottom: 100px;
 	left: 50%;
 	height: auto;
 	width: auto;
@@ -32,7 +36,56 @@
 }
 .explore i
 {
-	font-size: 30px;
+	color: #ffffff90;
+	font-size: 45px;
+	transform: translateY(0);
+}
+.first-block
+{
+	margin-top: 50px;
+}
+.hor-news
+{
+	position: absolute;
+	top: calc(100vh - 0px);
+	left: 0;
+	right: 0;
+	width: calc(100% - 0px);
+	background: #fa760050;
+	padding: 0px;
+}
+.hor-news .hor-head
+{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 110px;
+	background: #fa7600;
+	padding: 10px 0px 10px 0px;
+	color: #fff;
+	font-weight: 800;
+}
+.hor-news .hor-cont
+{
+	display: inline-block;
+	width: calc(100% - 110px);
+	height: 100%;
+	float: right;
+	overflow: visible;
+	padding: 10px 0px 10px 0px;
+}
+.hor-news .news-item
+{
+	display: inline-block;
+	padding-right: 10px;
+	/*border-right: 1px solid #12121250;*/
+	text-decoration: none;
+}
+.hor-news .news-item img
+{
+	height: 15px;
+	width: auto;
 }
 .slideshow .slide:before
 {
@@ -56,6 +109,7 @@
     overflow: visible;
     margin-bottom: 10px;
     margin-bottom: 30px;
+    background: #fff;
 }
 .latest-widget .latest-widget-swiper {
 	position: relative;
@@ -218,7 +272,7 @@
 	left: 0px;
 	right: 0px;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	z-index: -1;
 }
 .parallex .parallex-background
@@ -273,8 +327,8 @@
 	width: 100%;
 	height: 100%;
 	overflow: visible;
-	grid-template-columns: auto auto auto;
-	gap: 20px;
+	grid-template-columns: auto auto;
+	gap: 0;
 	transition: all 0.5s ease;
 	z-index: 4;
 }
@@ -285,52 +339,46 @@
 }
 .parallex .parallex-icons .icon
 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 38px;
+	display: block;
+	text-align: center;
 	margin: 5px;
 	padding: 10px;
-	background: #12121250;
-	border-radius: 50%;
-	overflow: hidden;
-	border: 1px solid #fa760050;
-	box-shadow: 1px 1px 10px #12121230;
-	transition: all 0.5s ease;
+	margin: 5px;
 }
 .parallex .parallex-icons .p-icon
 {
-	height: auto;
-	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 130px;
+	height: 80px;
 	z-index: 2;
+	padding: 10px;
+	background: #12121250;
+	border-radius: 10%;
+	overflow: hidden;
+	border: 1px solid #fa760090;
+	box-shadow: 1px 1px 10px #12121230;
+	transition: all 0.5s ease;
 	-webkit-tap-highlight-color: transparent;
 }
-.parallex .parallex-icons .p-icon:hover .icon
+.parallex .parallex-icons .p-icon span center
 {
-	width: 50px;
-	height: 50px;
-	margin: 0;
-	box-shadow: 1px 1px 10px #F7A60080;
-}
-.parallex .parallex-icons .p-icon center
-{
-	display: block;
 	color: #fff;
-	width: 75px;
-	text-align: center;
 }
-.parallex .parallex-icons .p-icon:hover center
+.parallex .parallex-icons .p-icon span
 {
 	display: block;
-	color: #F7A600;
-	font-size: 16px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
 }
 
 
 .parallex .parallex-cont .icons-swiper
 {
-	width: 260px;
+	display: none;
+	width: 360px;
 	height: 260px;
 	overflow: hidden;
 	z-index: 5;
@@ -505,7 +553,7 @@
 	{
 		position: absolute;
 		top: 0px;
-		height: 100%;
+		height: 100vh;
 	}
 	.parallex .parallex-cont > div
 	{

@@ -145,28 +145,46 @@
 			<div id="full-menu" class="full-menu">
 				<div class="head">
 					<div class="cont">
-						
+						<div class="icon">
+							<img src="/resources/banner3.png" alt="" />
+						</div>
 					</div>
 					<div onclick="openMenu()" class="close">
 						<i class='bx bx-x' ></i>
 					</div>
 				</div>
 				<div class="item">
-					<span><a class="link-1" href="#">Home</a></span>
+					<span><a class="link-1" href="#"><i class='bx bx-home'></i> Home</a></span>
+				</div>
+				<div class="item sub">
+					<span><i class='bx bx-home'></i> Departments</span>
+					<span class="more"><i class='bx bxs-chevron-right' ></i></span>
+					<div class="item-clicker" onclick="openSubMenu(this);"></div>
+					<div class="sub-item">
+						<div onclick="closeSubMenu(this);" class="item item-back">
+							<span><i class='bx bx-chevron-left'></i> Menu</span>
+						</div>
+						<div class="item">
+							<span><a class="link-1" href="/Departments/department.html"> Electronics</a></span>
+						</div>
+						<div class="item">
+							<span><a class="link-1" href="/Departments/department.html"> Computer Science</a></span>
+						</div>
+						<div class="item">
+							<span><a class="link-1" href="/Departments/department.html"> Mechanical</a></span>
+						</div>
+					</div>
 				</div>
 				<div class="item">
-					<span><a class="link-1" href="/Departments/department.html">Departments</a></span>
+					<span><a class="link-1" href="#"><i class='bx bx-home'></i> Library</a></span>
 				</div>
 				<div class="item">
-					<span><a class="link-1" href="#">Library</a></span>
-				</div>
-				<div class="item">
-					<span><a class="link-1" href="#">Partner With Us</a></span>
+					<span><a class="link-1" href="#"><i class='bx bx-home'></i> Partner With Us</a></span>
 				</div>
 			</div>
 			<div class="showable-1">
 				<div class="icon">
-					<img loading="lazy" src="/resources/banner.png">
+					<img loading="lazy" src="/resources/banner2.png">
 				</div>
 				<!-- <div class="name">IIT Palakad</div> -->
 				<div class="menu">
@@ -204,8 +222,12 @@
 			<div class="parallex-cont">
 				<div>
 					<h2 class="head">IIT Palakad</h2>
+					<p>
+						Nurturing Minds for Better World
+					</p>
 					<div class="icons-swiper">
 						<div class="swiper-wrapper">
+							<!--
 							<div class="swiper-slide">
 								<div class="parallex-icons">
 									<a class="link-1 p-icon" href="#">
@@ -247,47 +269,37 @@
 								</div>
 								
 							</div>
-							
+							-->
 							<div class="swiper-slide">
 								<div class="parallex-icons">
 									<a class="link-1 p-icon" href="#">
 										<div class="icon">
 											<i class='bx bx-book'></i>
+											<span><center>Library</center></span>
 										</div>
-										<center>Library</center>
+										
 									</a>
 									<a class="link-1 p-icon" href="#">
 										<div class="icon">
 											<i class='bx bxs-user'></i>
+											<span><center>Alumini</center></span>
 										</div>
-										<center>Alumini</center>
 									</a>
 									<a class="link-1 p-icon" href="#">
 										<div class="icon">
 											<i class="bi bi-image-alt"></i>
+											<span><center>Gallery</center></span>
 										</div>
-										<center>Gallery</center>
 									</a>
 									<a class="link-1 p-icon" href="#">
 										<div class="icon">
 											<i class='bx bx-book'></i>
+											<span><center>Library</center></span>
 										</div>
-										<center>Library</center>
-									</a>
-									<a class="link-1 p-icon" href="#">
-										<div class="icon">
-											<i class='bx bx-book'></i>
-										</div>
-										<center>Library</center>
-									</a>
-									<a class="link-1 p-icon" href="#">
-										<div class="icon">
-											<i class='bx bx-book'></i>
-										</div>
-										<center>Library</center>
 									</a>
 								</div>
 							</div>
+							
 						</div>
 						<div class="icons-prev"><i class='bx bx-chevron-left'></i></div>
   						<div class="icons-next"><i class='bx bxs-chevron-right'></i></div>
@@ -295,13 +307,19 @@
 					</div>
 				</div>
 
-				<div class="explore"><i class='bx bxs-chevron-up'></i></div>
+				<div class="explore"><i class='bx bx-mouse'></i></div>
 			</div>
 		</div>
 		
 		<div class="main">
-			
-			<div class="latest-widget">
+			<div class="hor-news">
+				<span class="hor-head">Latest News!</span>
+				<marquee onmouseout="this.start()" onmouseover="this.stop();" class="hor-cont">
+					<a class="news-item" href="#"><i class='bx bx-play'></i> <span>Welcome to IIT Palakad </span></a>
+					<a class="news-item" href="#"><i class='bx bx-play'></i> <span>Welcome to IIT Palakad</span></a>
+				</marquee>
+			</div>
+			<div class="latest-widget first-block">
 		    	
 				<div class="latest-widget-swiper block">
 				<!-- Additional required wrapper -->

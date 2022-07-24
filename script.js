@@ -17,7 +17,7 @@ function setUp()
 	
 	explore.onclick = function()
 	{
-		window.scrollTo({top: main.getBoundingClientRect().top - topbar.offsetHeight + 15, behavior: "smooth"});
+		window.scrollTo({top: main.getBoundingClientRect().top - topbar.offsetHeight, behavior: "smooth"});
 	//	window.onscroll();
 	}
 	menuIcon.addEventListener("click", openMenu);
@@ -28,8 +28,8 @@ function setUp()
 		if(window.scrollY >= 60)
 		{
 			explore.style.bottom = "-100%";
-		}else{explore.style.bottom = "0";}
-		if(window.scrollY >= $('.icons-swiper')[0].offsetTop + $('.icons-swiper')[0].getBoundingClientRect().height /2)
+		}else{explore.style.bottom = "100px";}
+		if(window.scrollY >= $('.parallex')[0].getBoundingClientRect().height /5)
 		{
 			topbar.classList.add("scrolled");
 		}
@@ -140,6 +140,18 @@ function setUp()
 		},
 		speed: 1000,
 	});
+}
+function openSubMenu(elem)
+{
+	elem.parentElement.classList.add('opened');
+//	elem.onclick = null;
+}
+function closeSubMenu(elem)
+{
+	elem = elem.parentElement.parentElement;
+//	elem.setAttribute("onclick","openSubMenu(this);");
+	elem.classList.remove("opened");
+	console.log(elem);
 }
 function openMenu()
 {
